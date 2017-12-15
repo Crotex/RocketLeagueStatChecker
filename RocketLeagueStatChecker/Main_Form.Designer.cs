@@ -52,7 +52,7 @@
             // test_DELETELATER
             // 
             this.test_DELETELATER.AutoSize = true;
-            this.test_DELETELATER.Location = new System.Drawing.Point(440, 252);
+            this.test_DELETELATER.Location = new System.Drawing.Point(550, 305);
             this.test_DELETELATER.Name = "test_DELETELATER";
             this.test_DELETELATER.Size = new System.Drawing.Size(35, 13);
             this.test_DELETELATER.TabIndex = 1;
@@ -67,6 +67,7 @@
             this.Controls.Add(this.seasonBox);
             this.Name = "Main_Form";
             this.Text = "Rocket League Stat Checker";
+            this.Load += new System.EventHandler(this.Main_Form_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

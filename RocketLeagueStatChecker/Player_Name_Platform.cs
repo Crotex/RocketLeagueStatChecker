@@ -6,8 +6,8 @@ namespace RocketLeagueStatChecker
 {
     public partial class Player_Name_Platform : Form
     {
-        public String name;
-        public int platform;
+        public static String name;
+        public static int platform;
 
         public Player_Name_Platform()
         {
@@ -28,11 +28,13 @@ namespace RocketLeagueStatChecker
                         {
                             platform = 3;
                             name = player_name.Text;
+                            openMain();
                         }
                         else
                         {
                             platform = 2;
                             name = player_name.Text;
+                            openMain();
                         }
                     }
                     else
@@ -42,15 +44,13 @@ namespace RocketLeagueStatChecker
                         {
                             platform = 1;
                             name = id.ToString();
+                            openMain();
                         }
                         else
                         {
                             Error("Please make sure to use your SteamID instead of your name!");
                         }
                     }
-                    Form Main = new Main_Form();
-                    Main.Show();
-                    //Close();
                 }
                 else
                 {
@@ -82,6 +82,13 @@ namespace RocketLeagueStatChecker
         public void Error(String message)
         {
             MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        //Open Main_Form
+        private void openMain()
+        {
+            Form form = new Main_Form();
+            form.Show();
         }
     }
 }

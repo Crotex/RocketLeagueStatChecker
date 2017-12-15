@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows.Forms;
 using RLSApi.Data;
 using RLSApi.Net.Requests;
@@ -16,132 +18,108 @@ namespace RocketLeagueStatChecker
 {
     public partial class Main_Form : Form
     {
-        private static Player_Name_Platform entry;
-        private static Player player;
+        public static RlsPlatform plat;
+        public static RlsSeason s = new RlsSeason();
 
-        public static async Task Run()
-        {
-            string key = "XEP0KTXPOXCLW0MOJN6GYBSQ1A1QPCLC";
-            var client = new RLSClient(key);
-            if (entry.platform == 1)
-            {
-                player = await client.GetPlayerAsync(RlsPlatform.Steam, entry.name);
-            }
-            else if (entry.platform == 2)
-            {
-                player = await client.GetPlayerAsync(RlsPlatform.Ps4, entry.name);
-            }
-            else
-            {
-                player = await client.GetPlayerAsync(RlsPlatform.Xbox, entry.name);
-            }
-        }
+        private bool season_set = false;
+        private bool platform_set = false;
 
         public Main_Form()
         {
             InitializeComponent();
-            entry = new Player_Name_Platform();
+        }
+
+        //Form Load
+        private void Main_Form_Load(object sender, EventArgs e)
+        {
             seasonBox.SelectedIndex = seasonBox.Items.Count - 1;
+            setSeason();
         }
 
         //Season select
         private void seasonBox_ItemChanged(object sender, EventArgs e)
         {
+            setSeason();
+            setPlatform();
+
+            if (season_set && platform_set)
+            {
+                GetRanks.getRanks(null);
+            }
+        }
+
+        //Check and set the selected Season
+        private void setSeason()
+        {
+            //Get selected season
             string item = seasonBox.SelectedItem.ToString();
 
-            Run().GetAwaiter().GetResult();
-
-            //Season 1
+            //Season set to 1
             if (item == "Season 1")
             {
-                var seasonplayer = player.RankedSeasons.FirstOrDefault(x => x.Key == RlsSeason.One);
-
-                if (seasonplayer.Value != null)
-                {
-                    test_DELETELATER.Text = "Season1";
-                }
-                else
-                {
-                    entry.Error("The Player you entered does not exist or hasn't played in Season 1!");
-                }
+                season_set = true;
+                s = RlsSeason.One;
             }
 
-            //Season 2
+            //Season set to 2
             if (item == "Season 2")
             {
-                var seasonplayer = player.RankedSeasons.FirstOrDefault(x => x.Key == RlsSeason.Six);
-
-                if (seasonplayer.Value != null)
-                {
-                    test_DELETELATER.Text = "Season2";
-                }
-                else
-                {
-                    entry.Error("The Player you entered does not exist or hasn't played in Season 2!");
-                }
+                season_set = true;
+                s = RlsSeason.Two;
             }
 
-            //Season 3
+            //Season set to 3
             if (item == "Season 3")
             {
-                var seasonplayer = player.RankedSeasons.FirstOrDefault(x => x.Key == RlsSeason.Six);
-
-                if (seasonplayer.Value != null)
-                {
-                    test_DELETELATER.Text = "Season3";
-                }
-                else
-                {
-                    entry.Error("The Player you entered does not existor hasn't played in Season 3!");
-                }
+                season_set = true;
+                s = RlsSeason.Three;
             }
 
-            //Season 4
+            //Season set to 4
             if (item == "Season 4")
             {
-                var seasonplayer = player.RankedSeasons.FirstOrDefault(x => x.Key == RlsSeason.Six);
-
-                if (seasonplayer.Value != null)
-                {
-                    test_DELETELATER.Text = "Season4";
-                }
-                else
-                {
-                    entry.Error("The Player you entered does not exist or hasn't played in Season 4!");
-                }
+                season_set = true;
+                s = RlsSeason.Four;
             }
 
-            //Season 5
+            //Season set to 5
             if (item == "Season 5")
             {
-                var seasonplayer = player.RankedSeasons.FirstOrDefault(x => x.Key == RlsSeason.Six);
-
-                if (seasonplayer.Value != null)
-                {
-                    test_DELETELATER.Text = "Season5";
-                }
-                else
-                {
-                    entry.Error("The Player you entered does not exist or hasn't played in Season 5!");
-                }
+                season_set = true;
+                s = RlsSeason.Five;
             }
 
-            //Season 6
+            //Season set to 6
             if (item == "Season 6")
             {
-                var seasonplayer = player.RankedSeasons.FirstOrDefault(x => x.Key == RlsSeason.Six);
+                season_set = true;
+                s = RlsSeason.Six;
+            }
+        }
 
-                if (seasonplayer.Value != null)
-                {
-                    test_DELETELATER.Text = "Season6";
-                }
-                else
-                {
-                    entry.Error("The Player you entered does not exist or hasn't played in Season 6!");
-                }
+        //Check and set the selected platform
+        private void setPlatform()
+        {
+            //Platform = Steam
+            if (Player_Name_Platform.platform == 1)
+            {
+                plat = RlsPlatform.Steam;
+                platform_set = true;
             }
 
+            //Platform = PS4
+            if (Player_Name_Platform.platform == 2)
+            {
+                plat = RlsPlatform.Ps4;
+                platform_set = true;
+            }
+
+            //Platform = XBOX
+            if (Player_Name_Platform.platform == 3)
+            {
+                plat = RlsPlatform.Xbox;
+                platform_set = true;
+            }
         }
     }
-
 }
