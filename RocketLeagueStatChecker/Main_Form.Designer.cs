@@ -67,6 +67,7 @@
             this.Controls.Add(this.seasonBox);
             this.Name = "Main_Form";
             this.Text = "Rocket League Stat Checker";
+            this.Deactivate += new System.EventHandler(this.Main_Form_Deactivate);
             this.Load += new System.EventHandler(this.Main_Form_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
