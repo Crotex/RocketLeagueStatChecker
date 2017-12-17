@@ -102,10 +102,5 @@ namespace RocketLeagueStatChecker
                 s = RlsSeason.Six;
             }
         }
-
-        private void Main_Form_Deactivate(object sender, EventArgs e)
-        {
-            Close();
-        }
     }
 }

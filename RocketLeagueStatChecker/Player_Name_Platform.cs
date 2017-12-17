@@ -31,8 +31,9 @@ namespace RocketLeagueStatChecker
         private void button1_Click(object sender, EventArgs e)
         {
             progressBar1.Maximum = 3;
+
             //Check if Name is entered and platform checked
-            if (player_name.Text.Count() > 0)
+            if (player_name.Text != "Enter your name (or SteamID64)")
             {
                 if (checkedListBox1.CheckedItems.Count == 1)
                 {
@@ -57,18 +58,18 @@ namespace RocketLeagueStatChecker
                         }
                         else
                         {
-                            Error("Please make sure to use your SteamID64 instead of your name! (steamidfinder.com)");
+                            Error("Please make sure to use your SteamID64 instead of your name if you're using Steam! (steamidfinder.com)");
                         }
                     }
                 }
                 else
                 {
-                    Error("Please make sure to select a platform first!");
+                    Error("Please make sure to select the platform you play on!");
                 }
             }
             else
             {
-                Error("Please make sure to enter your gametag first!");
+                Error("Please make sure to enter your gametag / SteamID64 first!");
             }
         }
 
@@ -102,9 +103,11 @@ namespace RocketLeagueStatChecker
 
         //Speicify the player
         private async void getRanks(RlsPlatform platform, bool Steam)
-
         {
             plat = platform;
+            bar.Visible = true;
+            button1.Visible = false;
+
             if (Steam)
             {
                 name = id.ToString();
@@ -115,7 +118,15 @@ namespace RocketLeagueStatChecker
             }
             bar.Value = 1;
 
-            player = await getPlayer();
+            try
+            {
+                player = await getPlayer();
+            }
+            catch (Exception e)
+            {
+                Error(e.Message);
+                Application.Restart();
+            }
 
             bar.Value = 3;
             player_set = true;
