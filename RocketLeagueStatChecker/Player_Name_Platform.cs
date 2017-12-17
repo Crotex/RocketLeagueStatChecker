@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Windows.Forms;
+using System.Threading;
 using System.Threading.Tasks;
 using RLSApi;
 using RLSApi.Data;
@@ -19,6 +20,7 @@ namespace RocketLeagueStatChecker
 
         private ProgressBar bar;
         private long id;
+        private RLSClient client;
 
         public Player_Name_Platform()
         {
@@ -94,28 +96,13 @@ namespace RocketLeagueStatChecker
         //Open Main_Form
         private static void openMain()
         {
-            Form form = new Main_Form();
-            Main_Form.player = player;
+            Main_Form form = new Main_Form();
             form.Show();
         }
 
-        //Get Player
-        private async Task Run()
-        {
-            var apiKey = "IQB8PMF8N605UKX7K698FTWWV99J2G9M";
-            var client = new RLSClient(apiKey);
-            bar.Value = 2;
+        //Speicify the player
+        private async void getRanks(RlsPlatform platform, bool Steam)
 
-            player = new Player();
-
-            player = await client.GetPlayerAsync(plat, name);
-            bar.Value = 3;
-
-            player_set = true;
-            openMain();
-        }
-
-        private void getRanks(RlsPlatform platform, bool Steam)
         {
             plat = platform;
             if (Steam)
@@ -127,7 +114,25 @@ namespace RocketLeagueStatChecker
                 name = player_name.Text;
             }
             bar.Value = 1;
-            Run().GetAwaiter().GetResult();
+
+            player = await getPlayer();
+
+            bar.Value = 3;
+            player_set = true;
+            openMain();
+            this.Hide();
+        }
+
+        //Get the player out of the Information entered above
+        private async Task<Player> getPlayer()
+        {
+            client = new RLSClient(config.key);
+
+            bar.Value = 2;
+
+            player = await client.GetPlayerAsync(plat, name);
+            return player;
+
         }
     }
 }

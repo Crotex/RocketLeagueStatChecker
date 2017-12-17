@@ -19,7 +19,7 @@ namespace RocketLeagueStatChecker
     public partial class Main_Form : Form
     {
         public static RlsSeason s = new RlsSeason();
-        public static Player player = new Player();
+        public Player player;
 
         private bool season_set = false;
 
@@ -42,6 +42,8 @@ namespace RocketLeagueStatChecker
 
             if (season_set && Player_Name_Platform.player_set)
             {
+                player = Player_Name_Platform.player;
+
                 var playerSeason = player.RankedSeasons.FirstOrDefault(x => x.Key == s);
 
                 if (playerSeason.Value != null)
@@ -52,7 +54,10 @@ namespace RocketLeagueStatChecker
                         MessageBox.Show(playerRank.Key + ": " + playerRank.Value.RankPoints + " rating");
                     }
                 }
-                else { }
+                else
+                {
+                    MessageBox.Show("The player " + player.DisplayName + "(" + player.Platform + ")" + "didn't play in Season " + s.ToString().ToLower());
+                }
             }
         }
 
