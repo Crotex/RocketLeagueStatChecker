@@ -35,7 +35,7 @@ namespace RocketLeagueStatChecker
             setSeason();
         }
 
-        //Season select
+        //Season selected
         private void seasonBox_ItemChanged(object sender, EventArgs e)
         {
             setSeason();
