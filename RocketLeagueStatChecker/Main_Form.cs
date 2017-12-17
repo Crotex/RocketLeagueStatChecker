@@ -18,11 +18,9 @@ namespace RocketLeagueStatChecker
 {
     public partial class Main_Form : Form
     {
-        public static RlsPlatform plat;
         public static RlsSeason s = new RlsSeason();
-
+        public Player player;
         private bool season_set = false;
-        private bool platform_set = false;
 
         public Main_Form()
         {
@@ -40,11 +38,21 @@ namespace RocketLeagueStatChecker
         private void seasonBox_ItemChanged(object sender, EventArgs e)
         {
             setSeason();
-            setPlatform();
 
-            if (season_set && platform_set)
+            if (season_set && Player_Name_Platform.player_set)
             {
-                GetRanks.getRanks(null);
+                player = Player_Name_Platform.player;
+                var playerSeason = player.RankedSeasons.FirstOrDefault(x => x.Key == s);
+
+                if (playerSeason.Value != null)
+                {
+                    MessageBox.Show("Player: " + player.DisplayName);
+                    foreach (var playerRank in playerSeason.Value)
+                    {
+                        MessageBox.Show(playerRank.Key + ": " + playerRank.Value.RankPoints + " rating");
+                    }
+                }
+                else { }
             }
         }
 
@@ -97,7 +105,7 @@ namespace RocketLeagueStatChecker
             }
         }
 
-        //Check and set the selected platform
+        /*Check and set the selected platform
         private void setPlatform()
         {
             //Platform = Steam
@@ -120,6 +128,26 @@ namespace RocketLeagueStatChecker
                 plat = RlsPlatform.Xbox;
                 platform_set = true;
             }
-        }
+        }*/
+
+        /*Check the ranks
+        public static async Task Run()
+        {
+            var apiKey = "IQB8PMF8N605UKX7K698FTWWV99J2G9M";
+            var client = new RLSClient(apiKey);
+
+            var player = await client.GetPlayerAsync(plat, Player_Name_Platform.name);
+
+            var playerSeason = player.RankedSeasons.FirstOrDefault(x => x.Key == s);
+
+            if (playerSeason.Value != null)
+            {
+                MessageBox.Show("Player: " + player.DisplayName);
+                foreach (var playerRank in playerSeason.Value)
+                {
+                    MessageBox.Show(playerRank.Key + ": " + playerRank.Value.RankPoints + " rating");
+                }
+            }
+        }*/
     }
 }

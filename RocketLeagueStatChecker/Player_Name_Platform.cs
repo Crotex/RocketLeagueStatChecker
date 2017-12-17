@@ -1,6 +1,11 @@
 ﻿using System;
 using System.Linq;
 using System.Windows.Forms;
+using System.Threading.Tasks;
+using RLSApi;
+using RLSApi.Data;
+using RLSApi.Net.Models;
+using RLSApi.Net.Requests;
 
 namespace RocketLeagueStatChecker
 {
@@ -8,14 +13,22 @@ namespace RocketLeagueStatChecker
     {
         public static String name;
         public static int platform;
+        public static RlsPlatform plat;
+        public static Player player;
+        public static bool player_set = false;
+
+        private static ProgressBar bar;
+        private static long id;
 
         public Player_Name_Platform()
         {
             InitializeComponent();
+            bar = progressBar1;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            progressBar1.Maximum = 3;
             //Check if Name is entered and platform checked
             if (player_name.Text.Count() > 0)
             {
@@ -26,25 +39,19 @@ namespace RocketLeagueStatChecker
                     {
                         if (checkedListBox1.GetItemChecked(1) == false)
                         {
-                            platform = 3;
-                            name = player_name.Text;
-                            openMain();
+                            getRanks(RlsPlatform.Xbox, false);
                         }
                         else
                         {
-                            platform = 2;
-                            name = player_name.Text;
-                            openMain();
+                            getRanks(RlsPlatform.Ps4, false);
                         }
                     }
                     else
                     {
-                        long id = 0;
+                        id = 0;
                         if (long.TryParse(player_name.Text, out id))
                         {
-                            platform = 1;
-                            name = id.ToString();
-                            openMain();
+                            getRanks(RlsPlatform.Steam, true);
                         }
                         else
                         {
@@ -85,10 +92,39 @@ namespace RocketLeagueStatChecker
         }
 
         //Open Main_Form
-        private void openMain()
+        private static void openMain()
         {
             Form form = new Main_Form();
             form.Show();
+        }
+
+        //Get Player
+        public static async Task Run()
+        {
+            var apiKey = "IQB8PMF8N605UKX7K698FTWWV99J2G9M";
+            var client = new RLSClient(apiKey);
+            bar.Value = 2;
+
+            player = await client.GetPlayerAsync(plat, name);
+            bar.Value = 3;
+
+            player_set = true;
+            openMain();
+        }
+
+        private void getRanks(RlsPlatform platform, bool Steam)
+        {
+            plat = platform;
+            if (Steam)
+            {
+                name = id.ToString();
+            }
+            else
+            {
+                name = player_name.Text;
+            }
+            bar.Value = 1;
+            Run().GetAwaiter().GetResult();
         }
     }
 }
