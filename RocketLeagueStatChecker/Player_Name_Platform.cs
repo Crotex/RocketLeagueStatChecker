@@ -11,14 +11,14 @@ namespace RocketLeagueStatChecker
 {
     public partial class Player_Name_Platform : Form
     {
-        public static String name;
-        public static int platform;
-        public static RlsPlatform plat;
+        public String name;
+        public int platform;
+        public RlsPlatform plat;
         public static Player player;
         public static bool player_set = false;
 
-        private static ProgressBar bar;
-        private static long id;
+        private ProgressBar bar;
+        private long id;
 
         public Player_Name_Platform()
         {
@@ -55,7 +55,7 @@ namespace RocketLeagueStatChecker
                         }
                         else
                         {
-                            Error("Please make sure to use your SteamID instead of your name!");
+                            Error("Please make sure to use your SteamID64 instead of your name! (steamidfinder.com)");
                         }
                     }
                 }
@@ -95,15 +95,18 @@ namespace RocketLeagueStatChecker
         private static void openMain()
         {
             Form form = new Main_Form();
+            Main_Form.player = player;
             form.Show();
         }
 
         //Get Player
-        public static async Task Run()
+        private async Task Run()
         {
             var apiKey = "IQB8PMF8N605UKX7K698FTWWV99J2G9M";
             var client = new RLSClient(apiKey);
             bar.Value = 2;
+
+            player = new Player();
 
             player = await client.GetPlayerAsync(plat, name);
             bar.Value = 3;

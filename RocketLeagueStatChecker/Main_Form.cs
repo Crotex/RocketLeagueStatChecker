@@ -19,7 +19,8 @@ namespace RocketLeagueStatChecker
     public partial class Main_Form : Form
     {
         public static RlsSeason s = new RlsSeason();
-        public Player player;
+        public static Player player = new Player();
+
         private bool season_set = false;
 
         public Main_Form()
@@ -41,7 +42,6 @@ namespace RocketLeagueStatChecker
 
             if (season_set && Player_Name_Platform.player_set)
             {
-                player = Player_Name_Platform.player;
                 var playerSeason = player.RankedSeasons.FirstOrDefault(x => x.Key == s);
 
                 if (playerSeason.Value != null)
