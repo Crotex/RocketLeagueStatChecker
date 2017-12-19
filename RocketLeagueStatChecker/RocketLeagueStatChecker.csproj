@@ -74,18 +74,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -94,6 +95,111 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\Unranked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\4+5+6\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\4+5+6\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\4+5+6\10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\4+5+6\11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\4+5+6\12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\4+5+6\13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\4+5+6\14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\4+5+6\15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\4+5+6\16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\4+5+6\17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\4+5+6\18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\4+5+6\19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\4+5+6\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\4+5+6\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\4+5+6\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\4+5+6\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\4+5+6\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\4+5+6\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\4+5+6\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\2+3\old_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\2+3\old_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\2+3\old_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\2+3\old_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\2+3\old_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\2+3\old_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\2+3\old_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\2+3\old_14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\2+3\old_15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\2+3\old_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\2+3\old_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\2+3\old_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\2+3\old_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\2+3\old_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\img\ranks\2+3\old_7.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
