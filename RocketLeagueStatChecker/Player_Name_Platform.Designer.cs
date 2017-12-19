@@ -32,9 +32,9 @@
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.savePlayerBox = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.button1 = new System.Windows.Forms.Button();
+            this.savePlayerBox = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,15 +102,16 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(284, 261);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
-            // savePlayerBox
+            // progressBar1
             // 
-            this.savePlayerBox.AutoSize = true;
-            this.savePlayerBox.Location = new System.Drawing.Point(3, 151);
-            this.savePlayerBox.Name = "savePlayerBox";
-            this.savePlayerBox.Size = new System.Drawing.Size(83, 17);
-            this.savePlayerBox.TabIndex = 5;
-            this.savePlayerBox.Text = "Save Player";
-            this.savePlayerBox.UseVisualStyleBackColor = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.progressBar1, 2);
+            this.progressBar1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.progressBar1.Location = new System.Drawing.Point(3, 221);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(278, 37);
+            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.progressBar1.TabIndex = 4;
+            this.progressBar1.Visible = false;
             // 
             // button1
             // 
@@ -125,16 +126,15 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // progressBar1
+            // savePlayerBox
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.progressBar1, 2);
-            this.progressBar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.progressBar1.Location = new System.Drawing.Point(3, 221);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(278, 37);
-            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.progressBar1.TabIndex = 4;
-            this.progressBar1.Visible = false;
+            this.savePlayerBox.AutoSize = true;
+            this.savePlayerBox.Location = new System.Drawing.Point(3, 151);
+            this.savePlayerBox.Name = "savePlayerBox";
+            this.savePlayerBox.Size = new System.Drawing.Size(83, 17);
+            this.savePlayerBox.TabIndex = 5;
+            this.savePlayerBox.Text = "Save Player";
+            this.savePlayerBox.UseVisualStyleBackColor = true;
             // 
             // Player_Name_Platform
             // 
@@ -146,7 +146,7 @@
             this.MaximumSize = new System.Drawing.Size(300, 300);
             this.MinimumSize = new System.Drawing.Size(300, 300);
             this.Name = "Player_Name_Platform";
-            this.Text = "Enter Player Information";
+            this.Text = "Enter Player";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

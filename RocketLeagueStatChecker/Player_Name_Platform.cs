@@ -16,7 +16,7 @@ namespace RocketLeagueStatChecker
     {
         public String name;
         public int platform;
-        public RlsPlatform plat;
+        public static RlsPlatform plat;
         public static Player player;
         public static bool player_set = false;
 
@@ -33,7 +33,7 @@ namespace RocketLeagueStatChecker
             progressBar1.Maximum = 3;
             try
             {
-                TextReader tr = new StreamReader("SavedPlayers.txt");
+                TextReader tr = new StreamReader("SavedPlayer.txt");
                 savedPlayer = tr.ReadLine();
                 int.TryParse(tr.ReadLine(), out platform);
                 tr.Close();
@@ -195,7 +195,7 @@ namespace RocketLeagueStatChecker
         {
             if (savePlayerBox.Checked)
             {
-                TextWriter tw = new StreamWriter("SavedPlayers.txt");
+                TextWriter tw = new StreamWriter("SavedPlayer.txt");
                 tw.Write(player_name.Text + "\n");
                 tw.Write(platform.ToString());
                 tw.Close();

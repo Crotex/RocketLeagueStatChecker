@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +30,7 @@ namespace RocketLeagueStatChecker
             InitializeComponent();
             seasonBox.SelectedIndex = seasonBox.Items.Count - 1;
             setSeason();
+            playerName.Text = "Player: " + player.DisplayName + ", Platform: " + Player_Name_Platform.plat;
         }
 
         //Season selected
@@ -97,14 +99,15 @@ namespace RocketLeagueStatChecker
                 {
                     foreach (var playerRank in playerSeason.Value)
                     {
-                        setRank(playerRank.Key.ToString(), (int)playerRank.Value.Tier, (int)playerRank.Value.Division, playerRank.Value.RankPoints);
+                        setRank(playerRank.Key.ToString(), (int)playerRank.Value.Tier);
+                        setInfo(playerRank.Key.ToString(), (int)playerRank.Value.Division + 1, playerRank.Value.RankPoints);
                     }
                 }
             }
         }
 
         //Set the ranks
-        private void setRank(string playlist, int tier, int division, int rating)
+        private void setRank(string playlist, int tier)
         {
             if (tier == 0) //unranked
             {
@@ -112,7 +115,6 @@ namespace RocketLeagueStatChecker
             }
             else
             {
-
                 if (s == RlsSeason.Three || s == RlsSeason.Two) //Old Images, max tier = 15
                 {
                     for (int i = 1; i <= 15; i++)
@@ -167,6 +169,78 @@ namespace RocketLeagueStatChecker
         private void Main_Form_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        //Set text of the labels displaying division and rating
+        private void setInfo(string playlist, int div, int rating)
+        {
+            if (playlist == "Duel")
+            {
+                if (div != 0)
+                {
+                    DuelInfo.Text = "Division " + convertDiv(div) + "\n" + rating + " Rating";
+                }
+            }
+            if (playlist == "Doubles")
+            {
+                if (div != 0)
+                {
+                    DoublesInfo.Text = "Division " + convertDiv(div) + "\n" + rating + " Rating";
+                }
+            }
+            if (playlist == "SoloStandard")
+            {
+                if (div != 0)
+                {
+                    Solo3sInfo.Text = "Division " + convertDiv(div) + "\n" + rating + " Rating";
+                }
+            }
+            if (playlist == "Standard")
+            {
+                if (div != 0)
+                {
+                    StandardInfo.Text = "Division " + convertDiv(div) + "\n" + rating + " Rating";
+                }
+            }
+        }
+
+        //Restyle div from int to String
+        private String convertDiv(int division)
+        {
+            string div = "";
+            if (division == 1)
+            {
+                div = "I";
+            }
+
+            if (division == 2)
+            {
+                div = "II";
+            }
+
+            if (division == 3)
+            {
+                div = "III";
+            }
+
+            if (division == 4)
+            {
+                div = "IV";
+            }
+
+            if (division == 5)
+            {
+                div = "V";
+            }
+
+            return div;
+        }
+
+        //return to main form and delete SavedPlayer file
+        private void button1_Click(object sender, EventArgs e)
+        {
+            File.Delete("SavedPlayer.txt");
+            Application.Restart();
         }
     }
 }
