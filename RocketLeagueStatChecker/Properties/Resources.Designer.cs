@@ -253,6 +253,16 @@ namespace RocketLeagueStatChecker.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap banner {
+            get {
+                object obj = ResourceManager.GetObject("banner", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap old_1 {
             get {
                 object obj = ResourceManager.GetObject("old_1", resourceCulture);

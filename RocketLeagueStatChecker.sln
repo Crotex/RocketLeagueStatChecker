@@ -5,16 +5,24 @@ VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketLeagueStatChecker", "RocketLeagueStatChecker\RocketLeagueStatChecker.csproj", "{1DEE41B2-F433-4CC0-A2C7-EA1FE2487323}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Installer", "Installer\Installer.vdproj", "{F649D5C6-CFA6-443F-813A-F1D6FBCD43F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		DefaultBuild|Any CPU = DefaultBuild|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{1DEE41B2-F433-4CC0-A2C7-EA1FE2487323}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1DEE41B2-F433-4CC0-A2C7-EA1FE2487323}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DEE41B2-F433-4CC0-A2C7-EA1FE2487323}.DefaultBuild|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DEE41B2-F433-4CC0-A2C7-EA1FE2487323}.DefaultBuild|Any CPU.Build.0 = Debug|Any CPU
 		{1DEE41B2-F433-4CC0-A2C7-EA1FE2487323}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DEE41B2-F433-4CC0-A2C7-EA1FE2487323}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F649D5C6-CFA6-443F-813A-F1D6FBCD43F3}.Debug|Any CPU.ActiveCfg = Debug
+		{F649D5C6-CFA6-443F-813A-F1D6FBCD43F3}.DefaultBuild|Any CPU.ActiveCfg = Debug
+		{F649D5C6-CFA6-443F-813A-F1D6FBCD43F3}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

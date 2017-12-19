@@ -242,5 +242,11 @@ namespace RocketLeagueStatChecker
             File.Delete("SavedPlayer.txt");
             Application.Restart();
         }
+
+        //Open link on banner Click
+        private void BannerBox_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://rocketleaguestats.com");
+        }
     }
 }
