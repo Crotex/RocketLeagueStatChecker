@@ -1,14 +1,10 @@
-﻿using System;
-using System.Linq;
-using System.IO;
-using System.Collections.Generic;
-using System.Windows.Forms;
-using System.Threading;
-using System.Threading.Tasks;
-using RLSApi;
+﻿using RLSApi;
 using RLSApi.Data;
 using RLSApi.Net.Models;
-using RLSApi.Net.Requests;
+using System;
+using System.IO;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace RocketLeagueStatChecker
 {
