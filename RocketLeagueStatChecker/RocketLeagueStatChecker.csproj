@@ -130,111 +130,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\img\ranks\Unranked.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\img\ranks\4+5+6\8.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\img\ranks\4+5+6\9.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\img\ranks\4+5+6\10.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\img\ranks\4+5+6\11.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\img\ranks\4+5+6\12.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\img\ranks\4+5+6\13.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\img\ranks\4+5+6\14.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\img\ranks\4+5+6\15.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\img\ranks\4+5+6\16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\img\ranks\4+5+6\17.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\img\ranks\4+5+6\18.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\img\ranks\4+5+6\19.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\img\ranks\4+5+6\1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\img\ranks\4+5+6\2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\img\ranks\4+5+6\3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\img\ranks\4+5+6\4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\img\ranks\4+5+6\5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\img\ranks\4+5+6\6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\img\ranks\4+5+6\7.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\img\ranks\2+3\old_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\img\ranks\2+3\old_8.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\img\ranks\2+3\old_9.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\img\ranks\2+3\old_10.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\img\ranks\2+3\old_11.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\img\ranks\2+3\old_12.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\img\ranks\2+3\old_13.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\img\ranks\2+3\old_14.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\img\ranks\2+3\old_15.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\img\ranks\2+3\old_2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\img\ranks\2+3\old_3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\img\ranks\2+3\old_4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\img\ranks\2+3\old_5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\img\ranks\2+3\old_6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\img\ranks\2+3\old_7.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.6.1 %28x86 und x64%29</ProductName>
@@ -249,6 +144,110 @@
   <ItemGroup>
     <None Include="Resources\rls_partner_horizontal_large.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\unranked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranks\new\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranks\new\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranks\new\10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranks\new\11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranks\new\12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranks\new\13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranks\new\14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranks\new\15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranks\new\16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranks\new\17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranks\new\18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranks\new\19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranks\new\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranks\new\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranks\new\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranks\new\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranks\new\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranks\new\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranks\new\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranks\old\old_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranks\old\old_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranks\old\old_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranks\old\old_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranks\old\old_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranks\old\old_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranks\old\old_14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranks\old\old_15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranks\old\old_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranks\old\old_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranks\old\old_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranks\old\old_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranks\old\old_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranks\old\old_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranks\old\old_7.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
