@@ -6,6 +6,8 @@ using System.IO;
 using System.Linq;
 using System.Resources;
 using System.Windows.Forms;
+using System.Globalization;
+using System.Threading.Tasks;
 
 namespace RocketLeagueStatChecker
 {
@@ -22,6 +24,7 @@ namespace RocketLeagueStatChecker
             seasonBox.SelectedIndex = seasonBox.Items.Count - 1;
             setSeason();
             playerName.Text = "Player: " + player.DisplayName + ", Platform: " + Player_Name_Platform.plat;
+            updateLabel.Text = "Last Update: " + DateTime.Now.ToString("HH:mm");
         }
 
         //Season selected
@@ -91,7 +94,7 @@ namespace RocketLeagueStatChecker
                     foreach (var playerRank in playerSeason.Value)
                     {
                         setRank(playerRank.Key.ToString(), (int)playerRank.Value.Tier);
-                        setInfo(playerRank.Key.ToString(), (int)playerRank.Value.Division + 1, playerRank.Value.RankPoints);
+                        setInfo(playerRank.Key.ToString(), (int)playerRank.Value.Division + 1, playerRank.Value.RankPoints, (int)playerRank.Value.MatchesPlayed);
                     }
                 }
             }
@@ -163,34 +166,34 @@ namespace RocketLeagueStatChecker
         }
 
         //Set text of the labels displaying division and rating
-        private void setInfo(string playlist, int div, int rating)
+        private void setInfo(string playlist, int div, int rating, int matches)
         {
             if (playlist == "Duel")
             {
                 if (div != 0)
                 {
-                    DuelInfo.Text = "Division " + convertDiv(div) + "\n" + rating + " Rating";
+                    DuelInfo.Text = "Division " + convertDiv(div) + "\n" + rating + " Rating \n\n" + matches + " Matches";
                 }
             }
             if (playlist == "Doubles")
             {
                 if (div != 0)
                 {
-                    DoublesInfo.Text = "Division " + convertDiv(div) + "\n" + rating + " Rating";
+                    DoublesInfo.Text = "Division " + convertDiv(div) + "\n" + rating + " Rating \n\n" + matches + " Matches";
                 }
             }
             if (playlist == "SoloStandard")
             {
                 if (div != 0)
                 {
-                    Solo3sInfo.Text = "Division " + convertDiv(div) + "\n" + rating + " Rating";
+                    Solo3sInfo.Text = "Division " + convertDiv(div) + "\n" + rating + " Rating \n\n" + matches + " Matches";
                 }
             }
             if (playlist == "Standard")
             {
                 if (div != 0)
                 {
-                    StandardInfo.Text = "Division " + convertDiv(div) + "\n" + rating + " Rating";
+                    StandardInfo.Text = "Division " + convertDiv(div) + "\n" + rating + " Rating \n" + matches + " Matches";
                 }
             }
         }
@@ -238,6 +241,18 @@ namespace RocketLeagueStatChecker
         private void BannerBox_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("http://rocketleaguestats.com");
+        }
+
+        //Update Player Ranks
+        private async void update_Click(object sender, EventArgs e)
+        {
+            progressBar1.Show();
+            progressBar1.Value = 1;
+            await Player_Name_Platform.getPlayerTask();
+            progressBar1.Value = 2;
+            setSeason();
+            updateLabel.Text = "Last Update: " + DateTime.Now.ToString("HH:mm");
+            progressBar1.Hide();
         }
     }
 }

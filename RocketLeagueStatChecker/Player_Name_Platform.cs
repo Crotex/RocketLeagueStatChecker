@@ -10,15 +10,15 @@ namespace RocketLeagueStatChecker
 {
     public partial class Player_Name_Platform : Form
     {
-        public String name;
+        public static String name;
         public int platform;
         public static RlsPlatform plat;
         public static Player player;
         public static bool player_set = false;
 
-        private ProgressBar bar;
+        private static ProgressBar bar;
         private long id;
-        private RLSClient client;
+        private static RLSClient client;
         private string savedPlayer;
         private bool Steam, platform_set = false;
 
@@ -78,12 +78,14 @@ namespace RocketLeagueStatChecker
                         if (checkedListBox1.GetItemChecked(1) == false)
                         {
                             platform = 2;
+                            name = player_name.Text;
                             savePlayer();
                             getPlayerInformation(RlsPlatform.Xbox, false);
                         }
                         else
                         {
                             platform = 1;
+                            name = player_name.Text;
                             savePlayer();
                             getPlayerInformation(RlsPlatform.Ps4, false);
                         }
@@ -94,6 +96,7 @@ namespace RocketLeagueStatChecker
                         if (long.TryParse(player_name.Text, out id))
                         {
                             platform = 0;
+                            name = player_name.Text;
                             savePlayer();
                             getPlayerInformation(RlsPlatform.Steam, true);
                         }
@@ -173,17 +176,14 @@ namespace RocketLeagueStatChecker
         }
 
         //Get the player out of the Information entered above
-        private async Task<Player> getPlayerTask()
+        public static async Task<Player> getPlayerTask()
         {
             client = new RLSClient(config.key);
-
-            name = player_name.Text;
 
             bar.Value = 2;
 
             player = await client.GetPlayerAsync(plat, name);
             return player;
-
         }
 
         //Save Player to file and automatically start with him on next start
