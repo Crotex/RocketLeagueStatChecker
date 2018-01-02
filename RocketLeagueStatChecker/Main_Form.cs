@@ -193,7 +193,7 @@ namespace RocketLeagueStatChecker
             {
                 if (div != 0)
                 {
-                    StandardInfo.Text = "Division " + convertDiv(div) + "\n" + rating + " Rating \n" + matches + " Matches";
+                    StandardInfo.Text = "Division " + convertDiv(div) + "\n" + rating + " Rating \n\n" + matches + " Matches";
                 }
             }
         }
