@@ -312,7 +312,8 @@
             "Season 3",
             "Season 4",
             "Season 5",
-            "Season 6"});
+            "Season 6",
+            "Season 7"});
             this.seasonBox.Location = new System.Drawing.Point(3, 5);
             this.seasonBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
             this.seasonBox.Name = "seasonBox";
@@ -325,10 +326,10 @@
             this.playerName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.playerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playerName.ForeColor = System.Drawing.SystemColors.Control;
-            this.playerName.Location = new System.Drawing.Point(446, 0);
+            this.playerName.Location = new System.Drawing.Point(442, 0);
             this.playerName.Margin = new System.Windows.Forms.Padding(0);
             this.playerName.Name = "playerName";
-            this.playerName.Size = new System.Drawing.Size(346, 28);
+            this.playerName.Size = new System.Drawing.Size(342, 28);
             this.playerName.TabIndex = 2;
             this.playerName.Text = "Player: ";
             this.playerName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -337,10 +338,10 @@
             // 
             this.button1.AutoSize = true;
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(1141, 5);
+            this.button1.Location = new System.Drawing.Point(1128, 5);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 23);
+            this.button1.Size = new System.Drawing.Size(133, 23);
             this.button1.TabIndex = 3;
             this.button1.Text = "ChangePlayer";
             this.button1.UseVisualStyleBackColor = true;
@@ -364,9 +365,9 @@
             this.updateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.updateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.updateLabel.Location = new System.Drawing.Point(449, 28);
+            this.updateLabel.Location = new System.Drawing.Point(445, 28);
             this.updateLabel.Name = "updateLabel";
-            this.updateLabel.Size = new System.Drawing.Size(340, 27);
+            this.updateLabel.Size = new System.Drawing.Size(336, 27);
             this.updateLabel.TabIndex = 5;
             this.updateLabel.Text = "Last Update:";
             this.updateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -377,7 +378,7 @@
             this.progressBar1.Location = new System.Drawing.Point(103, 31);
             this.progressBar1.Maximum = 2;
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(340, 21);
+            this.progressBar1.Size = new System.Drawing.Size(336, 21);
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar1.TabIndex = 6;
             this.progressBar1.Visible = false;
@@ -386,11 +387,11 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::RocketLeagueStatChecker.Properties.Resources.banner;
-            this.pictureBox1.Location = new System.Drawing.Point(792, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(784, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
             this.tableLayoutPanel3.SetRowSpan(this.pictureBox1, 2);
-            this.pictureBox1.Size = new System.Drawing.Size(346, 55);
+            this.pictureBox1.Size = new System.Drawing.Size(341, 55);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;

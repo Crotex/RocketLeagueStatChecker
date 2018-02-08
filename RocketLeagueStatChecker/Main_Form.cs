@@ -78,6 +78,13 @@ namespace RocketLeagueStatChecker
                 s = RlsSeason.Six;
                 getRanksFromSeason(s);
             }
+
+            if(item == "Season 7")
+            {
+                season_set = true;
+                s = RlsSeason.Seven;
+                getRanksFromSeason(s);
+            }
         }
 
         //Get the ranks from the selected season
