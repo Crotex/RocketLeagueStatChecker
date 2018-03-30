@@ -79,8 +79,7 @@
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.BackColor = System.Drawing.Color.Gray;
-            this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.DimGray;
             this.tableLayoutPanel2.ColumnCount = 4;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -115,10 +114,10 @@
             this.StandardInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.StandardInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StandardInfo.ForeColor = System.Drawing.SystemColors.Control;
-            this.StandardInfo.Location = new System.Drawing.Point(946, 525);
+            this.StandardInfo.Location = new System.Drawing.Point(948, 526);
             this.StandardInfo.Margin = new System.Windows.Forms.Padding(0);
             this.StandardInfo.Name = "StandardInfo";
-            this.StandardInfo.Size = new System.Drawing.Size(317, 100);
+            this.StandardInfo.Size = new System.Drawing.Size(316, 100);
             this.StandardInfo.TabIndex = 11;
             this.StandardInfo.Text = "--";
             this.StandardInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -129,10 +128,10 @@
             this.Solo3sInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Solo3sInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Solo3sInfo.ForeColor = System.Drawing.SystemColors.Control;
-            this.Solo3sInfo.Location = new System.Drawing.Point(631, 525);
+            this.Solo3sInfo.Location = new System.Drawing.Point(632, 526);
             this.Solo3sInfo.Margin = new System.Windows.Forms.Padding(0);
             this.Solo3sInfo.Name = "Solo3sInfo";
-            this.Solo3sInfo.Size = new System.Drawing.Size(314, 100);
+            this.Solo3sInfo.Size = new System.Drawing.Size(316, 100);
             this.Solo3sInfo.TabIndex = 10;
             this.Solo3sInfo.Text = "--";
             this.Solo3sInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -143,10 +142,10 @@
             this.DoublesInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DoublesInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DoublesInfo.ForeColor = System.Drawing.SystemColors.Control;
-            this.DoublesInfo.Location = new System.Drawing.Point(316, 525);
+            this.DoublesInfo.Location = new System.Drawing.Point(316, 526);
             this.DoublesInfo.Margin = new System.Windows.Forms.Padding(0);
             this.DoublesInfo.Name = "DoublesInfo";
-            this.DoublesInfo.Size = new System.Drawing.Size(314, 100);
+            this.DoublesInfo.Size = new System.Drawing.Size(316, 100);
             this.DoublesInfo.TabIndex = 9;
             this.DoublesInfo.Text = "--";
             this.DoublesInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -158,10 +157,10 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(946, 1);
+            this.label4.Location = new System.Drawing.Point(948, 0);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(317, 100);
+            this.label4.Size = new System.Drawing.Size(316, 100);
             this.label4.TabIndex = 7;
             this.label4.Text = "Standard";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -173,10 +172,10 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(631, 1);
+            this.label3.Location = new System.Drawing.Point(632, 0);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(314, 100);
+            this.label3.Size = new System.Drawing.Size(316, 100);
             this.label3.TabIndex = 6;
             this.label3.Text = "Solo Standard";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -188,10 +187,10 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(316, 1);
+            this.label2.Location = new System.Drawing.Point(316, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(314, 100);
+            this.label2.Size = new System.Drawing.Size(316, 100);
             this.label2.TabIndex = 5;
             this.label2.Text = "Doubles";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -200,10 +199,10 @@
             // 
             this.DoublesRankIcon.BackColor = System.Drawing.Color.Transparent;
             this.DoublesRankIcon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DoublesRankIcon.Location = new System.Drawing.Point(316, 102);
+            this.DoublesRankIcon.Location = new System.Drawing.Point(316, 100);
             this.DoublesRankIcon.Margin = new System.Windows.Forms.Padding(0);
             this.DoublesRankIcon.Name = "DoublesRankIcon";
-            this.DoublesRankIcon.Size = new System.Drawing.Size(314, 422);
+            this.DoublesRankIcon.Size = new System.Drawing.Size(316, 426);
             this.DoublesRankIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.DoublesRankIcon.TabIndex = 1;
             this.DoublesRankIcon.TabStop = false;
@@ -212,10 +211,10 @@
             // 
             this.SoloStandardRankIcon.BackColor = System.Drawing.Color.Transparent;
             this.SoloStandardRankIcon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SoloStandardRankIcon.Location = new System.Drawing.Point(631, 102);
+            this.SoloStandardRankIcon.Location = new System.Drawing.Point(632, 100);
             this.SoloStandardRankIcon.Margin = new System.Windows.Forms.Padding(0);
             this.SoloStandardRankIcon.Name = "SoloStandardRankIcon";
-            this.SoloStandardRankIcon.Size = new System.Drawing.Size(314, 422);
+            this.SoloStandardRankIcon.Size = new System.Drawing.Size(316, 426);
             this.SoloStandardRankIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.SoloStandardRankIcon.TabIndex = 2;
             this.SoloStandardRankIcon.TabStop = false;
@@ -224,22 +223,22 @@
             // 
             this.StandardRankIcon.BackColor = System.Drawing.Color.Transparent;
             this.StandardRankIcon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.StandardRankIcon.Location = new System.Drawing.Point(946, 102);
+            this.StandardRankIcon.Location = new System.Drawing.Point(948, 100);
             this.StandardRankIcon.Margin = new System.Windows.Forms.Padding(0);
             this.StandardRankIcon.Name = "StandardRankIcon";
-            this.StandardRankIcon.Size = new System.Drawing.Size(317, 422);
+            this.StandardRankIcon.Size = new System.Drawing.Size(316, 426);
             this.StandardRankIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.StandardRankIcon.TabIndex = 3;
             this.StandardRankIcon.TabStop = false;
             // 
             // DuelRankIcon
             // 
-            this.DuelRankIcon.BackColor = System.Drawing.Color.Gray;
+            this.DuelRankIcon.BackColor = System.Drawing.Color.Transparent;
             this.DuelRankIcon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DuelRankIcon.Location = new System.Drawing.Point(1, 102);
+            this.DuelRankIcon.Location = new System.Drawing.Point(0, 100);
             this.DuelRankIcon.Margin = new System.Windows.Forms.Padding(0);
             this.DuelRankIcon.Name = "DuelRankIcon";
-            this.DuelRankIcon.Size = new System.Drawing.Size(314, 422);
+            this.DuelRankIcon.Size = new System.Drawing.Size(316, 426);
             this.DuelRankIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.DuelRankIcon.TabIndex = 0;
             this.DuelRankIcon.TabStop = false;
@@ -251,10 +250,10 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(1, 1);
+            this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(314, 100);
+            this.label1.Size = new System.Drawing.Size(316, 100);
             this.label1.TabIndex = 4;
             this.label1.Text = "Duel";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -266,10 +265,10 @@
             this.DuelInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DuelInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DuelInfo.ForeColor = System.Drawing.SystemColors.Control;
-            this.DuelInfo.Location = new System.Drawing.Point(1, 525);
+            this.DuelInfo.Location = new System.Drawing.Point(0, 526);
             this.DuelInfo.Margin = new System.Windows.Forms.Padding(0);
             this.DuelInfo.Name = "DuelInfo";
-            this.DuelInfo.Size = new System.Drawing.Size(314, 100);
+            this.DuelInfo.Size = new System.Drawing.Size(316, 100);
             this.DuelInfo.TabIndex = 8;
             this.DuelInfo.Text = "--";
             this.DuelInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -277,7 +276,7 @@
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.AutoSize = true;
-            this.tableLayoutPanel3.BackColor = System.Drawing.Color.DimGray;
+            this.tableLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.tableLayoutPanel3.ColumnCount = 5;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
@@ -326,10 +325,10 @@
             this.playerName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.playerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playerName.ForeColor = System.Drawing.SystemColors.Control;
-            this.playerName.Location = new System.Drawing.Point(442, 0);
+            this.playerName.Location = new System.Drawing.Point(430, 0);
             this.playerName.Margin = new System.Windows.Forms.Padding(0);
             this.playerName.Name = "playerName";
-            this.playerName.Size = new System.Drawing.Size(342, 28);
+            this.playerName.Size = new System.Drawing.Size(330, 28);
             this.playerName.TabIndex = 2;
             this.playerName.Text = "Player: ";
             this.playerName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -338,10 +337,10 @@
             // 
             this.button1.AutoSize = true;
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(1128, 5);
+            this.button1.Location = new System.Drawing.Point(1092, 5);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 23);
+            this.button1.Size = new System.Drawing.Size(169, 23);
             this.button1.TabIndex = 3;
             this.button1.Text = "ChangePlayer";
             this.button1.UseVisualStyleBackColor = true;
@@ -365,9 +364,9 @@
             this.updateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.updateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.updateLabel.Location = new System.Drawing.Point(445, 28);
+            this.updateLabel.Location = new System.Drawing.Point(433, 28);
             this.updateLabel.Name = "updateLabel";
-            this.updateLabel.Size = new System.Drawing.Size(336, 27);
+            this.updateLabel.Size = new System.Drawing.Size(324, 27);
             this.updateLabel.TabIndex = 5;
             this.updateLabel.Text = "Last Update:";
             this.updateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -378,7 +377,7 @@
             this.progressBar1.Location = new System.Drawing.Point(103, 31);
             this.progressBar1.Maximum = 2;
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(336, 21);
+            this.progressBar1.Size = new System.Drawing.Size(324, 21);
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar1.TabIndex = 6;
             this.progressBar1.Visible = false;
@@ -387,11 +386,11 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::RocketLeagueStatChecker.Properties.Resources.banner;
-            this.pictureBox1.Location = new System.Drawing.Point(784, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(760, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
             this.tableLayoutPanel3.SetRowSpan(this.pictureBox1, 2);
-            this.pictureBox1.Size = new System.Drawing.Size(341, 55);
+            this.pictureBox1.Size = new System.Drawing.Size(329, 55);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
